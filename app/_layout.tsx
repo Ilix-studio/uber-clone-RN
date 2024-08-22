@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { useFonts } from "expo-font";
+import { tokenCache } from "@/library/auth";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,7 +35,7 @@ export default function RootLayout() {
     return null;
   }
   return (
-    <ClerkProvider publishableKey={publishableKey}>
+    <ClerkProvider publishableKey={publishableKey} tokenCache={tokenCache}>
       <ClerkLoaded>
         <Stack>
           <Stack.Screen name="index" options={{ headerShown: false }} />

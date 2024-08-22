@@ -14,7 +14,7 @@ const Onboarding = () => {
   const router = useRouter();
 
   const handleSkip = () => {
-    router.replace("/(auth)sign-up"); // Use the suggested correct path
+    router.replace("/(auth)/sign-up"); // Use the suggested correct path
   };
 
   return (
